@@ -1,0 +1,142 @@
+test_authenticated_mitm_16_bit (test_attacks.TestAttacks.test_authenticated_mitm_16_bit) ... ok
+test_authenticated_mitm_24_bit (test_attacks.TestAttacks.test_authenticated_mitm_24_bit) ... ok
+test_authenticated_mitm_32_bit (test_attacks.TestAttacks.test_authenticated_mitm_32_bit) ... ok
+test_unauthenticated_mitm_16_bit (test_attacks.TestAttacks.test_unauthenticated_mitm_16_bit) ... ok
+test_unauthenticated_mitm_24_bit (test_attacks.TestAttacks.test_unauthenticated_mitm_24_bit) ... ok
+test_unauthenticated_mitm_32_bit (test_attacks.TestAttacks.test_unauthenticated_mitm_32_bit) ... ok
+test_generate_keypair (test_authentication.TestAuthentication.test_generate_keypair) ... ok
+test_invalid_signature (test_authentication.TestAuthentication.test_invalid_signature) ... ok
+test_message_must_be_bytes (test_authentication.TestAuthentication.test_message_must_be_bytes) ... ok
+test_modified_message (test_authentication.TestAuthentication.test_modified_message) ... ok
+test_signature_must_be_bytes (test_authentication.TestAuthentication.test_signature_must_be_bytes) ... ok
+test_valid_signature (test_authentication.TestAuthentication.test_valid_signature) ... ok
+test_wrong_private_key_type (test_authentication.TestAuthentication.test_wrong_private_key_type) ... ok
+test_wrong_public_key (test_authentication.TestAuthentication.test_wrong_public_key) ... ok
+test_wrong_public_key_type (test_authentication.TestAuthentication.test_wrong_public_key_type) ... ok
+test_boolean (test_factorization.TestFactorization.test_boolean) ... ok
+test_distinct_factors (test_factorization.TestFactorization.test_distinct_factors) ... ok
+test_distinct_factors_22 (test_factorization.TestFactorization.test_distinct_factors_22) ... ok
+test_factorize_22 (test_factorization.TestFactorization.test_factorize_22) ... ok
+test_factorize_one (test_factorization.TestFactorization.test_factorize_one) ... ok
+test_factorize_prime (test_factorization.TestFactorization.test_factorize_prime) ... ok
+test_negative (test_factorization.TestFactorization.test_negative) ... ok
+test_repeated_factors (test_factorization.TestFactorization.test_repeated_factors) ... ok
+test_string (test_factorization.TestFactorization.test_string) ... ok
+test_zero (test_factorization.TestFactorization.test_zero) ... ok
+test_boolean_generator (test_generator.TestGenerator.test_boolean_generator) ... ok
+test_composite_modulus (test_generator.TestGenerator.test_composite_modulus) ... ok
+test_find_generator_23 (test_generator.TestGenerator.test_find_generator_23) ... ok
+test_find_generator_65537 (test_generator.TestGenerator.test_find_generator_65537) ... ok
+test_find_generator_boolean (test_generator.TestGenerator.test_find_generator_boolean) ... ok
+test_find_generator_composite (test_generator.TestGenerator.test_find_generator_composite) ... ok
+test_generator_out_of_range (test_generator.TestGenerator.test_generator_out_of_range) ... ok
+test_invalid_generator_23 (test_generator.TestGenerator.test_invalid_generator_23) ... ok
+test_string_generator (test_generator.TestGenerator.test_string_generator) ... ok
+test_valid_generator_23 (test_generator.TestGenerator.test_valid_generator_23) ... ok
+test_valid_generator_65537 (test_generator.TestGenerator.test_valid_generator_65537) ... ok
+test_boolean_nonce (test_messages.TestMessages.test_boolean_nonce) ... ok
+test_deterministic_encoding (test_messages.TestMessages.test_deterministic_encoding) ... ok
+test_encode_decode (test_messages.TestMessages.test_encode_decode) ... ok
+test_extra_fields (test_messages.TestMessages.test_extra_fields) ... ok
+test_invalid_json (test_messages.TestMessages.test_invalid_json) ... ok
+test_invalid_nonce_characters (test_messages.TestMessages.test_invalid_nonce_characters) ... ok
+test_missing_fields (test_messages.TestMessages.test_missing_fields) ... ok
+test_non_dictionary_json (test_messages.TestMessages.test_non_dictionary_json) ... ok
+test_nonce_length (test_messages.TestMessages.test_nonce_length) ... ok
+test_nonce_randomness (test_messages.TestMessages.test_nonce_randomness) ... ok
+test_short_nonce (test_messages.TestMessages.test_short_nonce) ... ok
+test_valid_fields (test_messages.TestMessages.test_valid_fields) ... ok
+test_valid_nonce (test_messages.TestMessages.test_valid_nonce) ... ok
+test_against_python_pow (test_modular_math.TestModularExponentiation.test_against_python_pow) ... ok
+test_boolean_input (test_modular_math.TestModularExponentiation.test_boolean_input) ... ok
+test_exponent_zero (test_modular_math.TestModularExponentiation.test_exponent_zero) ... ok
+test_known_result (test_modular_math.TestModularExponentiation.test_known_result) ... ok
+test_modulus_one (test_modular_math.TestModularExponentiation.test_modulus_one) ... ok
+test_negative_base (test_modular_math.TestModularExponentiation.test_negative_base) ... ok
+test_negative_exponent (test_modular_math.TestModularExponentiation.test_negative_exponent) ... ok
+test_zero_modulus (test_modular_math.TestModularExponentiation.test_zero_modulus) ... ok
+test_allow_classroom_fixture (test_parameters.TestPrimeGeneration.test_allow_classroom_fixture) ... ok
+test_boolean_bit_length (test_parameters.TestPrimeGeneration.test_boolean_bit_length) ... ok
+test_generate_16_bit_prime (test_parameters.TestPrimeGeneration.test_generate_16_bit_prime) ... ok
+test_generate_24_bit_prime (test_parameters.TestPrimeGeneration.test_generate_24_bit_prime) ... ok
+test_generate_32_bit_prime (test_parameters.TestPrimeGeneration.test_generate_32_bit_prime) ... ok
+test_invalid_bit_length (test_parameters.TestPrimeGeneration.test_invalid_bit_length) ... ok
+test_reject_boolean_modulus (test_parameters.TestPrimeGeneration.test_reject_boolean_modulus) ... ok
+test_reject_composite (test_parameters.TestPrimeGeneration.test_reject_composite) ... ok
+test_reject_invalid_fixture_flag (test_parameters.TestPrimeGeneration.test_reject_invalid_fixture_flag) ... ok
+test_reject_small_modulus (test_parameters.TestPrimeGeneration.test_reject_small_modulus) ... ok
+test_reject_string_modulus (test_parameters.TestPrimeGeneration.test_reject_string_modulus) ... ok
+test_string_bit_length (test_parameters.TestPrimeGeneration.test_string_bit_length) ... ok
+test_validate_generated_prime (test_parameters.TestPrimeGeneration.test_validate_generated_prime) ... ok
+test_alice_creation (test_participant.TestParticipant.test_alice_creation) ... ok
+test_bob_creation (test_participant.TestParticipant.test_bob_creation) ... ok
+test_boolean_public_key (test_participant.TestParticipant.test_boolean_public_key) ... ok
+test_invalid_generator (test_participant.TestParticipant.test_invalid_generator) ... ok
+test_invalid_participant_name (test_participant.TestParticipant.test_invalid_participant_name) ... ok
+test_invalid_public_key (test_participant.TestParticipant.test_invalid_public_key) ... ok
+test_private_key_range (test_participant.TestParticipant.test_private_key_range) ... ok
+test_public_key_range (test_participant.TestParticipant.test_public_key_range) ... ok
+test_shared_secret_matches (test_participant.TestParticipant.test_shared_secret_matches) ... ok
+test_invalid_signature_encoding (test_protocol.TestProtocol.test_invalid_signature_encoding) ... ok
+test_modified_signed_message (test_protocol.TestProtocol.test_modified_signed_message) ... ok
+test_successful_16_bit_exchange (test_protocol.TestProtocol.test_successful_16_bit_exchange) ... ok
+test_successful_24_bit_exchange (test_protocol.TestProtocol.test_successful_24_bit_exchange) ... ok
+test_successful_32_bit_exchange (test_protocol.TestProtocol.test_successful_32_bit_exchange) ... ok
+test_wrong_identity_key (test_protocol.TestProtocol.test_wrong_identity_key) ... ok
+test_boolean_public_value (test_secure_receiver.TestSecureReceiver.test_boolean_public_value) ... ok
+test_extra_field (test_secure_receiver.TestSecureReceiver.test_extra_field) ... ok
+test_fresh_sessions_are_accepted (test_secure_receiver.TestSecureReceiver.test_fresh_sessions_are_accepted) ... ok
+test_invalid_nonce (test_secure_receiver.TestSecureReceiver.test_invalid_nonce) ... ok
+test_invalid_public_value (test_secure_receiver.TestSecureReceiver.test_invalid_public_value) ... ok
+test_invalid_session_id (test_secure_receiver.TestSecureReceiver.test_invalid_session_id) ... ok
+test_missing_field (test_secure_receiver.TestSecureReceiver.test_missing_field) ... ok
+test_modified_public_value (test_secure_receiver.TestSecureReceiver.test_modified_public_value) ... ok
+test_replayed_signed_message (test_secure_receiver.TestSecureReceiver.test_replayed_signed_message) ... ok
+test_reused_nonce (test_secure_receiver.TestSecureReceiver.test_reused_nonce) ... ok
+test_reused_session_id (test_secure_receiver.TestSecureReceiver.test_reused_session_id) ... ok
+test_valid_initiation (test_secure_receiver.TestSecureReceiver.test_valid_initiation) ... ok
+test_wrong_receiver (test_secure_receiver.TestSecureReceiver.test_wrong_receiver) ... ok
+test_wrong_sender (test_secure_receiver.TestSecureReceiver.test_wrong_sender) ... ok
+test_wrong_trusted_identity_key (test_secure_receiver.TestSecureReceiver.test_wrong_trusted_identity_key) ... ok
+test_complete_session (test_session.TestSessionManager.test_complete_session) ... ok
+test_completed_session_rejects_messages (test_session.TestSessionManager.test_completed_session_rejects_messages) ... ok
+test_duplicate_message (test_session.TestSessionManager.test_duplicate_message) ... ok
+test_finish_before_response (test_session.TestSessionManager.test_finish_before_response) ... ok
+test_incomplete_session_cannot_finish (test_session.TestSessionManager.test_incomplete_session_cannot_finish) ... ok
+test_invalid_session_id (test_session.TestSessionManager.test_invalid_session_id) ... ok
+test_register_message (test_session.TestSessionManager.test_register_message) ... ok
+test_replay_session (test_session.TestSessionManager.test_replay_session) ... ok
+test_response_before_init (test_session.TestSessionManager.test_response_before_init) ... ok
+test_start_session (test_session.TestSessionManager.test_start_session) ... ok
+test_unknown_session (test_session.TestSessionManager.test_unknown_session) ... ok
+
+----------------------------------------------------------------------
+Ran 111 tests in 0.135s
+
+OK
+
+======================================================================
+PROTOCOL AND ATTACK DEMONSTRATIONS
+======================================================================
+
+1. SUCCESSFUL AUTHENTICATED DIFFIE-HELLMAN EXCHANGE
+
+Authenticated: True
+Shared secrets match: True
+Session state: completed
+
+The authenticated exchange completed successfully, and Alice and Bob calculated matching shared secrets.
+
+
+2. UNAUTHENTICATED MAN-IN-THE-MIDDLE ATTACK
+
+{'attack': 'Unauthenticated MITM', 'eve_matches_alice': True, 'eve_matches_bob': True, 'attack_successful': True}
+
+Without authentication, Eve successfully established separate shared secrets with Alice and Bob.
+
+
+3. AUTHENTICATED MAN-IN-THE-MIDDLE ATTACK
+
+{'attack': 'Authenticated MITM', 'attack_rejected': True, 'reason': 'Signature verification failed'}
+
+Eve's modification of Alice's signed Diffie-Hellman message was rejected because the signature verification failed.
