@@ -83,3 +83,10 @@ class SessionManager:
             raise ValueError("Cannot complete an unfinished session.")
 
         session["state"] = "completed"
+
+    def abort_session(self, session_id):
+        """
+        Discard an unfinished session after failure.
+        Keep its ID marked as used to prevent replay.
+        """
+        self.active_sessions.pop(session_id, None)

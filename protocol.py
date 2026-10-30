@@ -19,6 +19,7 @@ from parameters import (
     is_generator,
 )
 
+PROTOCOL_ID = "DH-CLASSROOM-AUTH-v1"
 
 def create_signed_message(private_key, message):
     """Create a digitally signed JSON message."""
@@ -78,8 +79,26 @@ def verify_signed_message(public_key, signed_message):
 
     return message
 
+def create_trusted_identities():
+    """Create Alice and Bob's trusted signing identities."""
 
-def run_authenticated_exchange(bits=16, session_manager=None):
+    alice_private, alice_public = generate_identity_keypair()
+    bob_private, bob_public = generate_identity_keypair()
+
+    return {
+        "alice_private": alice_private,
+        "bob_private": bob_private,
+        "trusted_keys": {
+            "Alice": alice_public,
+            "Bob": bob_public
+        }
+    }
+
+def run_authenticated_exchange(
+    bits=16,
+    session_manager=None,
+    identities=None
+):
     """
     Perform a three-message authenticated Diffie-Hellman
     exchange with session tracking.
@@ -116,13 +135,12 @@ def run_authenticated_exchange(bits=16, session_manager=None):
     # 4. Generate trusted identity keys
     # --------------------------------------------------
 
-    alice_private, alice_public = generate_identity_keypair()
-    bob_private, bob_public = generate_identity_keypair()
+    if identities is None:
+        identities = create_trusted_identities()
 
-    trusted_keys = {
-        "Alice": alice_public,
-        "Bob": bob_public
-    }
+    alice_private = identities["alice_private"]
+    bob_private = identities["bob_private"]
+    trusted_keys = identities["trusted_keys"]
 
     # --------------------------------------------------
     # 5. Generate fresh nonces and session identifier
@@ -138,6 +156,7 @@ def run_authenticated_exchange(bits=16, session_manager=None):
     # --------------------------------------------------
 
     message1 = {
+        "protocol": PROTOCOL_ID,
         "type": "init",
         "sender": "Alice",
         "receiver": "Bob",
@@ -162,6 +181,7 @@ def run_authenticated_exchange(bits=16, session_manager=None):
     validate_fields(
         received1,
         [
+            "protocol",
             "type",
             "sender",
             "receiver",
@@ -172,6 +192,9 @@ def run_authenticated_exchange(bits=16, session_manager=None):
             "nonce_a"
         ]
     )
+
+    if received1["protocol"] != PROTOCOL_ID:
+        raise ValueError("Invalid protocol identifier.")
 
     if received1["type"] != "init":
         raise ValueError(
@@ -239,6 +262,7 @@ def run_authenticated_exchange(bits=16, session_manager=None):
     # --------------------------------------------------
 
     message2 = {
+        "protocol": PROTOCOL_ID,
         "type": "response",
         "sender": "Bob",
         "receiver": "Alice",
@@ -262,6 +286,7 @@ def run_authenticated_exchange(bits=16, session_manager=None):
     validate_fields(
         received2,
         [
+            "protocol",
             "type",
             "sender",
             "receiver",
@@ -271,6 +296,9 @@ def run_authenticated_exchange(bits=16, session_manager=None):
             "nonce_b"
         ]
     )
+
+    if received2["protocol"] != PROTOCOL_ID:
+     raise ValueError("Invalid protocol identifier.")
 
     if received2["type"] != "response":
         raise ValueError(
@@ -321,6 +349,7 @@ def run_authenticated_exchange(bits=16, session_manager=None):
     # --------------------------------------------------
 
     message3 = {
+        "protocol": PROTOCOL_ID,
         "type": "finish",
         "sender": "Alice",
         "receiver": "Bob",
@@ -343,6 +372,7 @@ def run_authenticated_exchange(bits=16, session_manager=None):
     validate_fields(
         received3,
         [
+            "protocol",
             "type",
             "sender",
             "receiver",
@@ -351,6 +381,9 @@ def run_authenticated_exchange(bits=16, session_manager=None):
             "message2"
         ]
     )
+
+    if received3["protocol"] != PROTOCOL_ID:
+        raise ValueError("Invalid protocol identifier.")
 
     if received3["type"] != "finish":
         raise ValueError(

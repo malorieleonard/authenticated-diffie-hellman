@@ -33,6 +33,9 @@ def decode_message(data):
     if type(data) is not bytes:
         raise TypeError("Encoded message must be bytes.")
 
+    if len(data) > 4096:
+        raise ValueError("Message exceeds 4096 bytes.")
+
     def reject_duplicates(pairs):
         result = {}
 

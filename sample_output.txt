@@ -44,6 +44,7 @@ test_missing_fields (test_messages.TestMessages.test_missing_fields) ... ok
 test_non_dictionary_json (test_messages.TestMessages.test_non_dictionary_json) ... ok
 test_nonce_length (test_messages.TestMessages.test_nonce_length) ... ok
 test_nonce_randomness (test_messages.TestMessages.test_nonce_randomness) ... ok
+test_oversized_message (test_messages.TestMessages.test_oversized_message) ... ok
 test_short_nonce (test_messages.TestMessages.test_short_nonce) ... ok
 test_valid_fields (test_messages.TestMessages.test_valid_fields) ... ok
 test_valid_nonce (test_messages.TestMessages.test_valid_nonce) ... ok
@@ -111,32 +112,6 @@ test_start_session (test_session.TestSessionManager.test_start_session) ... ok
 test_unknown_session (test_session.TestSessionManager.test_unknown_session) ... ok
 
 ----------------------------------------------------------------------
-Ran 111 tests in 0.135s
+Ran 112 tests in 0.225s
 
 OK
-
-======================================================================
-PROTOCOL AND ATTACK DEMONSTRATIONS
-======================================================================
-
-1. SUCCESSFUL AUTHENTICATED DIFFIE-HELLMAN EXCHANGE
-
-Authenticated: True
-Shared secrets match: True
-Session state: completed
-
-The authenticated exchange completed successfully, and Alice and Bob calculated matching shared secrets.
-
-
-2. UNAUTHENTICATED MAN-IN-THE-MIDDLE ATTACK
-
-{'attack': 'Unauthenticated MITM', 'eve_matches_alice': True, 'eve_matches_bob': True, 'attack_successful': True}
-
-Without authentication, Eve successfully established separate shared secrets with Alice and Bob.
-
-
-3. AUTHENTICATED MAN-IN-THE-MIDDLE ATTACK
-
-{'attack': 'Authenticated MITM', 'attack_rejected': True, 'reason': 'Signature verification failed'}
-
-Eve's modification of Alice's signed Diffie-Hellman message was rejected because the signature verification failed.

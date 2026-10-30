@@ -44,7 +44,7 @@ source .venv/bin/activate
 Install the required packages:
 
 ```bash
-python -m pip install pycryptodome cryptography
+python -m pip install -r requirements.txt
 ```
 
 Once the dependencies are installed, the project can be run and tested from the main project directory.
@@ -141,12 +141,12 @@ python -m unittest discover -v
 The final recorded test run produced:
 
 ```text
-Ran 111 tests in 0.282s
+Ran 112 tests in 0.282s
 
 OK
 ```
 
-All 111 tests passed.
+All 112 tests passed.
 
 To run only the replay and initiation-message security tests, use:
 

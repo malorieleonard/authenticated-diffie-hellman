@@ -29,6 +29,12 @@ class TestMessages(unittest.TestCase):
             encode_message(message2)
         )
 
+    def test_oversized_message(self):
+        oversized = b" " * 4097
+
+        with self.assertRaises(ValueError):
+            decode_message(oversized)
+
     def test_encode_decode(self):
         message = {"type": "init", "sender": "Alice"}
 
